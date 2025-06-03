@@ -1,0 +1,46 @@
+.button1 {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.125rem; /* 100% */
+  letter-spacing: 0.0625rem;
+}
+.body1 {
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5625rem; /* 147.059% */
+  letter-spacing: 0.00269rem;
+}
+.h6 {
+  font-size: 1.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.625rem; /* 100% */
+}
+.h3 {
+  font-size: 3.375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.625rem; /* 107.407% */
+}
+.h4 {
+  font-size: 2.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem; /* 117.647% */
+  letter-spacing: 0.00531rem;
+}
+.h5 {
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2rem; /* 114.286% */
+}
+.sub1 {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.625rem; /* 130% */
+  letter-spacing: 0.01563rem;
+}
