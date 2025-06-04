@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+  <link rel="stylesheet" href="./resets.css">
+  <link rel="stylesheet" href="./resets.css">
+  <link rel="stylesheet" href="./variables.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script rel="preconnect" src="https://cdn.tailwindcss.com"></script>
+  <script async>
+    tailwind.config = {
+      theme: {
+        screens: {
+          sm: '640px',
+          lg: '1025px',
+          xlg: {
+            max: '1024px',
+          },
+          xsm: {
+            max: '639px',
+          },
+          tablet: {
+            min: '640px',
+            max: '1024px',
+          },
+        },
+        fontFamily: {
+          svnGilroy: ["SVN-Gilroy", "sans-serif"],
+        },
+        extend: {
+          backgroundImage: {
+            "hover":
+              "linear-gradient(92deg, #F7083A 1.26%, #6519FF 125.12%)",
+          },
+          boxShadow: {
+            sd: '0px 2px 24px 0px rgba(0, 0, 0, 0.08)'
+          },
+          colors: {
+            do: "#F7083A",
+            xanh: "#6519FF",
+            "greyscale-grey-900": "#272727"
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body>
+  <header
+    class="section-container bg-white rounded-[6.5rem] shadow-sd h-[4.17rem] left-1/2 -translate-x-1/2 top-[0.9rem] fixed flex justify-between items-center pl-[1.2rem] pr-[0.48rem] z-50 xsm:h-[3.375rem] xsm:pl-[0.76rem] xsm:pr-[0.56rem]">
+    <div class="flex items-center space-x-[0.69rem] xsm:space-x-[0.6rem]">
+      <a class="block size-fit" href="/">
+        <img class="h-[2.50514rem] xsm:h-[2.08688rem] w-auto object-contain" src="./assets/img/logo-1.png" alt="">
+      </a>
+      <a class="block size-fit" href="/">
+        <img class="h-[2.50514rem] xsm:h-[2.08688rem] w-auto object-contain" src="./assets/img/logo-2.png" alt="">
+      </a>
+    </div>
+    <div class="space-x-[0.69rem] flex items-center">
+      <div class="space-x-[0.97rem] flex items-center xsm:hidden">
+        <button class="h-[2.64rem] px-[0.69rem] w-fit flex items-center button1 uppercase text-greyscale-grey-900">giới
+          thiệu</button>
+        <button class="h-[2.64rem] px-[0.69rem] w-fit flex items-center button1 uppercase text-greyscale-grey-900">nội
+          dung đào tạo</button>
+        <button class="h-[2.64rem] px-[0.69rem] w-fit flex items-center button1 uppercase text-greyscale-grey-900">đội
+          ngũ & giảng viên</button>
+        <button class="h-[2.64rem] px-[0.69rem] w-fit flex items-center button1 uppercase text-greyscale-grey-900">Đối
+          tác</button>
+      </div>
+      <button
+        class="h-[3.33333rem] xsm:h-[2.77778rem] xsm:px-[1.25rem] rounded-[6.5rem] bg-[linear-gradient(95deg,#F7083A_1.18%,#6519FF_79.9%)] xsm:bg-[linear-gradient(94deg,#F7083A_0%,#5400FF_98.93%)] px-[1.67rem] relative before:absolute before:top-0 before:left-0 before:size-full before:rounded-[6.5rem] before:bg-hover before:opacity-0 lg:hover:before:opacity-100 before:transition-all before:duration-300"><span
+          class="relative z-10 button2 button1 text-white uppercase">Đăng
+          ký</span>
+      </button>
+    </div>
+  </header>
+  <div class="sm:hidden xsm:flex bg-white shadow-sd h-[3.75rem] overflow-x-hidden w-full fixed bottom-0 left-0 z-50">
+    <div class="h-full w-fit px-[1.39rem] overflow-x-auto scrollbar-hidden flex items-center">
+      <button class="whitespace-nowrap button2 text-greyscale-grey-900 uppercase">GIỚI THIỆU</button>
+      <div class="mx-[1.67rem] opacity-20 bg-greyscale-grey-900 h-[0.90278rem] w-[1px] flex-shrink-0"></div>
+      <button class="whitespace-nowrap button2 text-greyscale-grey-900 uppercase">NỘI DUNG ĐẠO TẠO</button>
+      <div class="mx-[1.67rem] opacity-20 bg-greyscale-grey-900 h-[0.90278rem] w-[1px] flex-shrink-0"></div>
+      <button class="whitespace-nowrap button2 text-greyscale-grey-900 uppercase">ĐỘI NGŨ & GIẢNG VIÊN</button>
+      <div class="mx-[1.67rem] opacity-20 bg-greyscale-grey-900 h-[0.90278rem] w-[1px] flex-shrink-0"></div>
+      <button class="whitespace-nowrap button2 text-greyscale-grey-900 uppercase">ĐỐI TÁC</button>
+    </div>
+  </div>
+  <main class="w-full relative">
+    <section class="w-full relative h-screen flex sm:items-center xsm:pt-[5.56rem]">
+      <picture>
+        <!-- Ảnh dành cho màn hình nhỏ hơn 640px -->
+        <source media="(max-width: 639px)" srcset="./assets/img/bg-banner-mb.jpg" />
+
+        <!-- Ảnh mặc định (>= 640px) -->
+        <img class="absolute top-0 left-0 z-[5] size-full object-cover" src="./assets/img/bg-banner.jpg" alt="">
+      </picture>
+      <div class="section-container relative z-10">
+        <div class="flex items-center space-x-[1.12rem] xsm:space-x-[0.76rem]">
+          <img class="w-[7.5rem] xsm:w-[4.72222rem] h-auto object-contain" src="./assets/img/logo-banner.svg" alt="">
+          <div
+            class="roudned-[0rem_6.94444rem_6.94444rem_0rem] bg-[linear-gradient(90deg,rgba(102,25,255,0.00)_0%,#6619FF_100%)] text-white text-[1.52778rem] font-bold leading-[1.72] tracking-[0.00382rem] p-[0.55556rem_1.38889rem_0.55556rem_0rem] sm:[&>br]:hidden rounded-[0rem_6.94444rem_6.94444rem_0rem] xsm:rounded-[0rem_1.17215rem_1.17215rem_0rem] xsm:text-[1.05493rem] xsm:leading-[1.44] xsm:tracking-[0.00264rem] xsm:p-[0.46889rem_1.17215rem_0.46889rem_0rem]">
+            Chứng chỉ được </br> Chính phủ Pháp công nhận
+          </div>
+        </div>
+        <h1
+          class="text-[4.44444rem] xsm:text-[2.22222rem] xsm:leading-[0.95] xsm:-tracking-[0.01111rem] font-bold leading-[1.05] -tracking-[0.02222rem] text-white mt-[1.98rem] xsm:mt-[1.04rem]">
+          Paris Tech Leadership
+        </h1>
+        <h2
+          class="text-[1.94444rem] font-semibold leading-[1.35] tracking-[0.00486rem] xsm:text-[1.38889rem] xsm:leading-[1.9] xsm:tracking-[0.00347rem] text-white">
+          Professional Certificate</h2>
+        <div class="space-y-[0.42rem] mb-[1.04rem] xsm:space-y-[0.42rem] xsm:mt-[0.12rem]">
+          <div class="flex">
+            <img class="size-[1.11111rem] object-contain mr-[0.56rem] translate-y-[0.1rem]"
+              src="./assets/img/check-green.svg" alt="">
+            <span class="body1 body2 text-white">Tầm nhìn công nghệ và ứng dụng</span>
+          </div>
+          <div class="flex">
+            <img class="size-[1.11111rem] object-contain mr-[0.56rem] translate-y-[0.1rem]"
+              src="./assets/img/check-green.svg" alt="">
+            <span class="body1 body2 text-white">Quản lý dự án AI</span>
+          </div>
+          <div class="flex">
+            <img class="size-[1.11111rem] object-contain mr-[0.56rem] translate-y-[0.1rem]"
+              src="./assets/img/check-green.svg" alt="">
+            <span class="body1 body2 text-white">Nâng cao hiệu suất quản trị</br> bằng tối ưu hoá AI</span>
+          </div>
+          <div class="flex">
+            <img class="size-[1.11111rem] object-contain mr-[0.56rem] translate-y-[0.1rem]"
+              src="./assets/img/check-green.svg" alt="">
+            <span class="body1 body2 text-white">Khai thác sức mạnh AI</br> trong Hoạch định Chiến lược</span>
+          </div>
+        </div>
+        <button
+          class="h-[3.33333rem] xsm:h-[2.77778rem] xsm:px-[1.25rem] rounded-[6.5rem] bg-[linear-gradient(95deg,#F7083A_1.18%,#6519FF_79.9%)] xsm:bg-[linear-gradient(94deg,#F7083A_0%,#5400FF_98.93%)] px-[1.67rem] relative before:absolute before:top-0 before:left-0 before:size-full before:rounded-[6.5rem] before:bg-hover before:opacity-0 lg:hover:before:opacity-100 before:transition-all before:duration-300">
+          <span class="relative z-10 button2 button1 text-white uppercase">Đăng ký tham gia</span>
+        </button>
+      </div>
+      <div
+        class="h-[8.31rem] w-full absolute bottom-0 left-0 z-10 bg-[linear-gradient(0deg,#6519FF_0%,rgba(101,25,255,0.00)_100%)]">
+      </div>
+    </section>
+
+    <section class="w-full relative pt-[5.5rem]">
+      <div class="section-container flex justify-between">
+        <div>
+          <h3>VIETSTAR & PSTB</h3>
+          <h2>Tiên phong đào tạo
+            Lãnh đạo Công nghệ
+            kỷ nguyên AI</h2>
+        </div>
+        <div class="w-[31.8rem] h-[39rem]">
+          <img class="size-full object-cover rounded-[2.77778rem]" src="./assets/img/people-s1.jpg" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

@@ -2,19 +2,34 @@
 module.exports = {
   content: [],
   theme: {
+    screens: {
+      sm: "640px",
+      lg: "1025px",
+      xlg: {
+        max: "1024px",
+      },
+      xsm: {
+        max: "639px",
+      },
+      tablet: {
+        min: "640px",
+        max: "1024px",
+      },
+    },
     fontFamily: {
       svnGilroy: ["SVN-Gilroy", "sans-serif"],
     },
     extend: {
       backgroundImage: {
-        "gradient-number":
-          "linear-gradient(180deg, rgba(217, 217, 217, 0.00) 11.7%, #D9D9D9 40.82%, #D9D9D9 64.07%, rgba(217, 217, 217, 0.00) 93.43%)",
+        hover: "linear-gradient(92deg, #F7083A 1.26%, #6519FF 125.12%)",
       },
       boxShadow: {
-        nav: "2px 10px 20px 0px rgba(0, 42, 180, 0.15)",
+        sd: "0px 2px 24px 0px rgba(0, 0, 0, 0.08)",
       },
       colors: {
-        secondary: "#81FF00",
+        do: "#F7083A",
+        xanh: "#6519FF",
+        "greyscale-grey-900": "#272727",
       },
     },
   },

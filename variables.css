@@ -1,9 +1,9 @@
 .button1 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.125rem; /* 100% */
-  letter-spacing: 0.0625rem;
+  line-height: 1.25rem; /* 100% */
+  letter-spacing: 0.06944rem;
 }
 .body1 {
   font-size: 1.0625rem;
@@ -13,34 +13,58 @@
   letter-spacing: 0.00269rem;
 }
 .h6 {
-  font-size: 1.625rem;
+  font-size: 1.80556rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.625rem; /* 100% */
+  line-height: 1.80556rem; /* 100% */
 }
 .h3 {
-  font-size: 3.375rem;
+  font-size: 3.75rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 3.625rem; /* 107.407% */
-}
-.h4 {
-  font-size: 2.125rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 2.5rem; /* 117.647% */
-  letter-spacing: 0.00531rem;
+  line-height: 4.02778rem; /* 107.407% */
 }
 .h5 {
-  font-size: 1.75rem;
+  font-size: 1.94444rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 2rem; /* 114.286% */
+  line-height: 2.22222rem; /* 114.286% */
 }
 .sub1 {
-  font-size: 1.25rem;
+  font-size: 1.38889rem;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.625rem; /* 130% */
-  letter-spacing: 0.01563rem;
+  line-height: 1.80556rem; /* 130% */
+  letter-spacing: 0.01736rem;
+}
+.sub2 {
+  font-size: 1.18056rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.59722rem; /* 135.294% */
+  letter-spacing: 0.01181rem;
+}
+.section-container {
+  width: 79.2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 639px) {
+  .section-container {
+    width: calc(100% - 2.78rem);
+  }
+  .button2 {
+    font-size: 1.11111rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.11111rem; /* 100% */
+    letter-spacing: 0.01111rem;
+  }
+  .body2 {
+    font-size: 1.11111rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.52778rem; /* 137.5% */
+    letter-spacing: 0.00278rem;
+  }
 }
