@@ -30,6 +30,7 @@ module.exports = {
         do: "#F7083A",
         xanh: "#6519FF",
         "greyscale-grey-900": "#272727",
+        "greyscale-grey-600": "#545454",
       },
     },
   },
