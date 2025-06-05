@@ -63,6 +63,30 @@
   margin-left: auto;
   margin-right: auto;
 }
+.fade-animation {
+  animation: fadeInOut 7s infinite;
+}
+.fade-animation-delay {
+  animation: fadeInOut 7s infinite;
+  animation-delay: 3s;
+}
+.text-linear-gradient {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 86.19%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 639px) {
   .section-container {
     width: calc(100% - 2.78rem);
