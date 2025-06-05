@@ -22,6 +22,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         hover: "linear-gradient(92deg, #F7083A 1.26%, #6519FF 125.12%)",
+        "linear-default": "linear-gradient(180deg, #F7083A 0%, #6519FF 100%)",
       },
       boxShadow: {
         sd: "0px 2px 24px 0px rgba(0, 0, 0, 0.08)",
@@ -31,6 +32,7 @@ module.exports = {
         xanh: "#6519FF",
         "greyscale-grey-900": "#272727",
         "greyscale-grey-600": "#545454",
+        "greyscale-grey-500": "#5C5C5C",
       },
     },
   },

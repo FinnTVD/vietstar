@@ -35,6 +35,7 @@
           backgroundImage: {
             "hover":
               "linear-gradient(92deg, #F7083A 1.26%, #6519FF 125.12%)",
+            'linear-default': 'linear-gradient(180deg, #F7083A 0%, #6519FF 100%)'
           },
           boxShadow: {
             sd: '0px 2px 24px 0px rgba(0, 0, 0, 0.08)'
@@ -44,6 +45,7 @@
             xanh: "#6519FF",
             "greyscale-grey-900": "#272727",
             "greyscale-grey-600": "#545454",
+            "greyscale-grey-500": "#5C5C5C",
           },
         },
       },
@@ -53,7 +55,7 @@
 
 <body>
   <header
-    class="section-container bg-white rounded-[6.5rem] shadow-sd h-[4.17rem] left-1/2 -translate-x-1/2 top-[0.9rem] fixed flex justify-between items-center pl-[1.2rem] pr-[0.48rem] z-50 xsm:h-[3.375rem] xsm:pl-[0.76rem] xsm:pr-[0.56rem]">
+    class="section-container bg-white rounded-[6.5rem] shadow-sd h-[4.17rem] left-1/2 -translate-x-1/2 top-[0.9rem] fixed flex justify-between items-center pl-[1.2rem] pr-[0.48rem] z-50 xsm:h-[3.375rem] xsm:pl-[0.76rem] xsm:pr-[0.45rem]">
     <div class="flex items-center space-x-[0.69rem] xsm:space-x-[0.6rem]">
       <a class="block size-fit" href="/">
         <img class="h-[2.50514rem] xsm:h-[2.08688rem] w-auto object-contain" src="./assets/img/logo-1.png" alt="">
@@ -64,35 +66,42 @@
     </div>
     <div class="space-x-[0.69rem] flex items-center">
       <div class="space-x-[0.97rem] flex items-center xsm:hidden">
-        <button class="h-[2.64rem] px-[0.69rem] w-fit flex items-center button1 uppercase text-greyscale-grey-900">giới
+        <button data-target="#gioi-thieu"
+          class="h-[2.64rem] px-[0.69rem] w-fit flex items-center button1 uppercase text-greyscale-grey-900 btn-actions">giới
           thiệu</button>
-        <button class="h-[2.64rem] px-[0.69rem] w-fit flex items-center button1 uppercase text-greyscale-grey-900">nội
+        <button data-target=""
+          class="h-[2.64rem] px-[0.69rem] w-fit flex items-center button1 uppercase text-greyscale-grey-900 btn-actions">nội
           dung đào tạo</button>
-        <button class="h-[2.64rem] px-[0.69rem] w-fit flex items-center button1 uppercase text-greyscale-grey-900">đội
+        <button data-target=""
+          class="h-[2.64rem] px-[0.69rem] w-fit flex items-center button1 uppercase text-greyscale-grey-900 btn-actions">đội
           ngũ & giảng viên</button>
-        <button class="h-[2.64rem] px-[0.69rem] w-fit flex items-center button1 uppercase text-greyscale-grey-900">Đối
+        <button data-target=""
+          class="h-[2.64rem] px-[0.69rem] w-fit flex items-center button1 uppercase text-greyscale-grey-900 btn-actions">Đối
           tác</button>
       </div>
-      <button
-        class="h-[3.33333rem] xsm:h-[2.77778rem] flex items-center xsm:px-[1.25rem] whitespace-nowrap rounded-[6.5rem] bg-[linear-gradient(95deg,#F7083A_1.18%,#6519FF_79.9%)] xsm:bg-[linear-gradient(94deg,#F7083A_0%,#5400FF_98.93%)] px-[1.67rem] relative before:absolute before:top-0 before:left-0 before:size-full before:rounded-[6.5rem] before:bg-hover before:opacity-0 lg:hover:before:opacity-100 before:transition-all before:duration-300"><span
-          class="relative z-10 button2 button1 text-white uppercase">Đăng
+      <button data-target="footer"
+        class="h-[3.33333rem] xsm:h-[2.77778rem] flex items-center justify-center xsm:px-[1.25rem] whitespace-nowrap rounded-[6.5rem] bg-[linear-gradient(95deg,#F7083A_1.18%,#6519FF_79.9%)] xsm:bg-[linear-gradient(94deg,#F7083A_0%,#5400FF_98.93%)] px-[1.67rem] relative before:absolute before:top-0 before:left-0 before:size-full before:rounded-[6.5rem] before:bg-hover before:opacity-0 lg:hover:before:opacity-100 before:transition-all before:duration-300 btn-actions"><span
+          class="relative z-10 button2 button1 text-white uppercase mb-[-3px]">Đăng
           ký</span>
       </button>
     </div>
   </header>
   <div class="sm:hidden xsm:flex bg-white shadow-sd h-[3.75rem] overflow-x-hidden w-full fixed bottom-0 left-0 z-50">
     <div class="h-full w-fit px-[1.39rem] overflow-x-auto scrollbar-hidden flex items-center">
-      <button class="whitespace-nowrap button2 text-greyscale-grey-900 uppercase">GIỚI THIỆU</button>
+      <button class="whitespace-nowrap button2 text-greyscale-grey-900 uppercase btn-actions"
+        data-target="#gioi-thieu">GIỚI THIỆU</button>
       <div class="mx-[1.67rem] opacity-20 bg-greyscale-grey-900 h-[0.90278rem] w-[1px] flex-shrink-0"></div>
-      <button class="whitespace-nowrap button2 text-greyscale-grey-900 uppercase">NỘI DUNG ĐẠO TẠO</button>
+      <button class="whitespace-nowrap button2 text-greyscale-grey-900 uppercase btn-actions">NỘI DUNG ĐẠO TẠO</button>
       <div class="mx-[1.67rem] opacity-20 bg-greyscale-grey-900 h-[0.90278rem] w-[1px] flex-shrink-0"></div>
-      <button class="whitespace-nowrap button2 text-greyscale-grey-900 uppercase">ĐỘI NGŨ & GIẢNG VIÊN</button>
+      <button class="whitespace-nowrap button2 text-greyscale-grey-900 uppercase btn-actions">ĐỘI NGŨ & GIẢNG
+        VIÊN</button>
       <div class="mx-[1.67rem] opacity-20 bg-greyscale-grey-900 h-[0.90278rem] w-[1px] flex-shrink-0"></div>
-      <button class="whitespace-nowrap button2 text-greyscale-grey-900 uppercase">ĐỐI TÁC</button>
+      <button class="whitespace-nowrap button2 text-greyscale-grey-900 uppercase btn-actions">ĐỐI TÁC</button>
     </div>
   </div>
   <main class="w-full relative">
-    <section class="w-full relative h-screen flex sm:items-center xsm:pt-[5.56rem]">
+    <section
+      class="w-full relative h-screen xsm:h-[calc(100vh-3.75rem)] flex sm:items-center xsm:pt-[5.56rem] overflow-hidden">
       <picture>
         <!-- Ảnh dành cho màn hình nhỏ hơn 640px -->
         <source media="(max-width: 639px)" srcset="./assets/img/bg-banner-mb.jpg" />
@@ -100,6 +109,11 @@
         <!-- Ảnh mặc định (>= 640px) -->
         <img class="absolute top-0 left-0 z-[5] size-full object-cover" src="./assets/img/bg-banner.jpg" alt="">
       </picture>
+      <div class="absolute z-[6] bottom-0 left-0 w-[43.6rem] h-[44.9rem] xsm:hidden">
+        <img class="size-full object-fill animate-pulse-v2 delay-[3000ms]" src="./assets/img/ani-violet.png"
+          alt="Violet Image">
+        <img class="size-full object-fill animate-pulse-v2" src="./assets/img/ani-red.png" alt="Red Image">
+      </div>
       <div class="section-container relative z-10">
         <div class="flex items-center space-x-[1.12rem] xsm:space-x-[0.76rem]">
           <img class="w-[7.5rem] xsm:w-[4.72222rem] h-auto object-contain" src="./assets/img/logo-banner.svg" alt="">
@@ -115,7 +129,7 @@
         <h2
           class="text-[1.94444rem] font-semibold leading-[1.35] tracking-[0.00486rem] xsm:text-[1.38889rem] xsm:leading-[1.9] xsm:tracking-[0.00347rem] text-white">
           Professional Certificate</h2>
-        <div class="space-y-[0.42rem] mb-[1.04rem] xsm:space-y-[0.42rem] xsm:mt-[0.12rem]">
+        <div class="space-y-[0.42rem] mb-[1.04rem] xsm:space-y-[0.42rem] xsm:mt-[0.12rem] mt-[0.81rem]">
           <div class="flex">
             <img class="size-[1.11111rem] object-contain mr-[0.56rem] translate-y-[0.1rem]"
               src="./assets/img/check-green.svg" alt="">
@@ -129,17 +143,19 @@
           <div class="flex">
             <img class="size-[1.11111rem] object-contain mr-[0.56rem] translate-y-[0.1rem]"
               src="./assets/img/check-green.svg" alt="">
-            <span class="body1 body2-mb text-white">Nâng cao hiệu suất quản trị</br> bằng tối ưu hoá AI</span>
+            <span class="body1 body2-mb text-white sm:[&_br]:hidden">Nâng cao hiệu suất quản trị</br> bằng tối ưu hoá
+              AI</span>
           </div>
           <div class="flex">
             <img class="size-[1.11111rem] object-contain mr-[0.56rem] translate-y-[0.1rem]"
               src="./assets/img/check-green.svg" alt="">
-            <span class="body1 body2-mb text-white">Khai thác sức mạnh AI</br> trong Hoạch định Chiến lược</span>
+            <span class="body1 body2-mb text-white sm:[&_br]:hidden">Khai thác sức mạnh AI</br> trong Hoạch định Chiến
+              lược</span>
           </div>
         </div>
         <button
-          class="h-[3.33333rem] xsm:h-[2.77778rem] flex items-center xsm:px-[1.25rem] whitespace-nowrap rounded-[6.5rem] bg-[linear-gradient(95deg,#F7083A_1.18%,#6519FF_79.9%)] xsm:bg-[linear-gradient(94deg,#F7083A_0%,#5400FF_98.93%)] px-[1.67rem] relative before:absolute before:top-0 before:left-0 before:size-full before:rounded-[6.5rem] before:bg-hover before:opacity-0 lg:hover:before:opacity-100 before:transition-all before:duration-300">
-          <span class="relative z-10 button2 button1 text-white uppercase">Đăng ký tham gia</span>
+          class="h-[3.33333rem] xsm:h-[2.77778rem] flex items-center justify-center xsm:px-[1.25rem] whitespace-nowrap rounded-[6.5rem] bg-[linear-gradient(95deg,#F7083A_1.18%,#6519FF_79.9%)] xsm:bg-[linear-gradient(94deg,#F7083A_0%,#5400FF_98.93%)] px-[1.67rem] relative before:absolute before:top-0 before:left-0 before:size-full before:rounded-[6.5rem] before:bg-hover before:opacity-0 lg:hover:before:opacity-100 before:transition-all before:duration-300">
+          <span class="relative z-10 button2 button1 text-white uppercase mb-[-3px]">Đăng ký tham gia</span>
         </button>
       </div>
       <div
@@ -147,7 +163,7 @@
       </div>
     </section>
 
-    <section class="w-full relative pt-[5.5rem] xsm:pt-[4.12rem]">
+    <section id="gioi-thieu" class="w-full relative pt-[5.5rem] xsm:pt-[4.12rem]">
       <div class="section-container sm:flex sm:justify-between">
         <div class="w-[45.3rem] xsm:w-full">
           <div class="w-[36.6rem] xsm:w-full">
@@ -155,40 +171,51 @@
             <h2 class="h3 h4-mb text-greyscale-grey-900">Tiên phong đào tạo
               Lãnh đạo Công nghệ
               kỷ nguyên AI</h2>
-            <div class="w-[31.8rem] h-[39rem] xsm:w-full xsm:h-[15rem] sm:hidden xsm:mt-[1.11rem]">
-              <img class="size-full object-cover rounded-[2.77778rem] xsm:rounded-[1.11111rem]"
-                src="./assets/img/people-s1.jpg" alt="">
+            <div
+              class="w-[31.8rem] h-[39rem] xsm:w-full xsm:h-[15rem] sm:hidden xsm:mt-[1.11rem] bg-linear-default rounded-[2.77778rem] xsm:rounded-[1.11111rem] overflow-hidden relative">
+              <div class="absolute z-[1] scale-x-[-1] xsm:bottom-[-1.11rem] xsm:right-0 xsm:w-[18.4rem] xsm:h-[19rem]">
+                <img class="size-full object-fill animate-pulse-v2 delay-[3000ms]" src="./assets/img/ani-violet.png"
+                  alt="Violet Image">
+                <img class="size-full object-fill animate-pulse-v2" src="./assets/img/ani-red.png" alt="Red Image">
+              </div>
+              <img class="size-full object-cover relative z-10" src="./assets/img/people-s1.png" alt="">
             </div>
           </div>
           <div
             class="[&_strong]:font-bold [&_b]:font-bold body1 text-greyscale-grey-600 [&_strong]:text-greyscale-grey-900 [&_b]:text-greyscale-grey-900 [&_p+p]:mt-[0.56rem] my-[1.67rem] xsm:my-[1.11rem] body2-mb">
             <p>
-              Chứng chỉ Lãnh đạo Công nghệ Paris - Paris Tech Leadership Professional Certificate là chương trình đào
+              Chứng chỉ Lãnh đạo Công nghệ Paris - <strong>Paris Tech Leadership Professional Certificate</strong> là
+              chương trình đào
               tạo
               tiên phong
-              do Viện Quản lý VIETSTAR (Việt Nam) và Trường Kinh Doanh và Công Nghệ Paris PTS&B (Pháp) hợp tác phát
+              do <strong>Viện Quản lý VIETSTAR (Việt Nam) và Trường Kinh Doanh và Công Nghệ Paris PTS&B
+                (Pháp)</strong> hợp tác phát
               triển.
               Chương
-              trình được thiết kế nhằm trang bị cho các nhà lãnh đạo và quản lý Việt Nam tư duy chiến lược, năng lực
-              công
-              nghệ và khả
-              năng ứng dụng AI trong quản lý và kinh doanh, giúp họ điều hướng quá trình chuyển đổi số một cách hiệu
+              trình được thiết kế nhằm trang bị cho các nhà lãnh đạo và quản lý Việt Nam <strong>tư duy chiến lược, năng
+                lực
+                công
+                nghệ và khả
+                năng ứng dụng AI</strong> trong quản lý và kinh doanh, giúp họ điều hướng quá trình chuyển đổi số một
+              cách hiệu
               quả.
             </p>
-            <p>Trong bối cảnh Việt Nam đẩy mạnh đổi mới sáng tạo theo Nghị quyết 57-NQ/TW của Chính phủ, chương trình
+            <p>Trong bối cảnh Việt Nam đẩy mạnh đổi mới sáng tạo theo <strong>Nghị quyết 57-NQ/TW</strong> của Chính
+              phủ, chương trình
               này không chỉ
-              cung cấp kiến thức chuyên sâu mà còn giúp học viên dẫn dắt tổ chức phát triển bền vững, tận dụng công nghệ
-              để tạo lợi
-              thế cạnh tranh trong kỷ nguyên số.</p>
+              cung cấp kiến thức chuyên sâu mà còn giúp học viên <strong>dẫn dắt tổ chức phát triển bền vững, tận dụng
+                công nghệ
+                để tạo lợi
+                thế cạnh tranh trong kỷ nguyên số.</strong></p>
           </div>
           <div class="space-x-[0.83rem] flex">
             <button
-              class="h-[3.33333rem] xsm:h-[2.77778rem] flex items-center xsm:px-[1.25rem] whitespace-nowrap rounded-[6.5rem] bg-[linear-gradient(95deg,#F7083A_1.18%,#6519FF_79.9%)] xsm:bg-[linear-gradient(94deg,#F7083A_0%,#5400FF_98.93%)] px-[1.67rem] relative before:absolute before:top-0 before:left-0 before:size-full before:rounded-[6.5rem] before:bg-hover before:opacity-0 lg:hover:before:opacity-100 before:transition-all before:duration-300"><span
-                class="relative z-10 button2 button1 text-white uppercase">Tham gia ngay</span>
+              class="h-[3.33333rem] xsm:h-[2.77778rem] flex items-center justify-center xsm:px-[1.25rem] whitespace-nowrap rounded-[6.5rem] bg-[linear-gradient(95deg,#F7083A_1.18%,#6519FF_79.9%)] xsm:bg-[linear-gradient(94deg,#F7083A_0%,#5400FF_98.93%)] px-[1.67rem] relative before:absolute before:top-0 before:left-0 before:size-full before:rounded-[6.5rem] before:bg-hover before:opacity-0 lg:hover:before:opacity-100 before:transition-all before:duration-300"><span
+                class="relative z-10 button2 button1 text-white uppercase mb-[-3px]">Tham gia ngay</span>
             </button>
-            <button
-              class="h-[3.33333rem] xsm:h-[2.77778rem] flex items-center xsm:px-[1.25rem] whitespace-nowrap rounded-[6.5rem] bg-do px-[1.67rem] relative"><span
-                class="relative z-10 button2 button1 text-white uppercase">Video chi tiết</span>
+            <button onclick="openModal('modal2')"
+              class="h-[3.33333rem] xsm:h-[2.77778rem] flex items-center justify-center xsm:px-[1.25rem] whitespace-nowrap rounded-[6.5rem] bg-do px-[1.67rem] relative"><span
+                class="relative z-10 button2 button1 text-white uppercase mb-[-3px]">Video chi tiết</span>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"
                 class="size-6 flex-shrink-0 ml-1 mt-[-2px]">
                 <path fill-rule="evenodd"
@@ -198,18 +225,330 @@
             </button>
           </div>
         </div>
-        <div class="w-[31.8rem] h-[39rem] xsm:w-full xsm:h-auto xsm:hidden">
-          <img class="size-full object-cover rounded-[2.77778rem] xsm:rounded-[1.11111rem]"
-            src="./assets/img/people-s1.jpg" alt="">
+        <div
+          class="w-[31.8rem] h-[39rem] xsm:w-full xsm:h-auto xsm:hidden bg-linear-default overflow-hidden rounded-[2.77778rem] xsm:rounded-[1.11111rem] relative">
+          <div
+            class="w-[43.6rem] h-[44.9rem] absolute z-[1] bottom-[-3rem] right-[-2.57rem] scale-x-[-1] xsm:bottom-0 xsm:left-auto xsm:right-0 xsm:w-[16rem] xsm:h-[16.5rem]">
+            <img class="size-full object-fill animate-pulse-v2 delay-[3000ms]" src="./assets/img/ani-violet.png"
+              alt="Violet Image">
+            <img class="size-full object-fill animate-pulse-v2" src="./assets/img/ani-red.png" alt="Red Image">
+          </div>
+          <img class="size-full object-cover relative z-[5]" src="./assets/img/people-s1.png" alt="">
         </div>
       </div>
     </section>
 
-    <section class="w-full relative pt-[6.94rem] ">
-      <div class="section-container"></div>
+    <!-- Form Modal -->
+    <div id="modal2" class="modal-overlay">
+      <div class="modal relative" role="dialog" aria-labelledby="modal2-title">
+        <button class="absolute right-[-4rem] z-10 text-[5rem] font-normal text-white top-[-3rem]"
+          onclick="closeModal('modal2')" aria-label="Close modal">&times;</button>
+        <div class="size-full rounded-[1.38889rem] overflow-hidden">
+          <iframe class="size-full object-cover" width="560" height="315"
+            src="https://www.youtube.com/embed/BGhGAQrcKrY?enablejsapi=1" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <section class="w-full relative pt-[6.94rem] xsm:pt-[4.17rem]">
+      <div class="section-container">
+        <div class="w-[27.8rem] xsm:w-full">
+          <h3 class="h6 sub1-mb text-do mb-[0.56rem]">Đào tạo lãnh đạo:</h3>
+          <h2 class="h3 h4-mb text-greyscale-grey-900">Nhu cầu tất yếu
+            thời đại số</h2>
+        </div>
+        <div class="mt-[1.39rem] w-full h-fit relative xsm:mt-[1.11rem]">
+          <div class="w-[53.1rem] h-fit absolute -top-[3.4rem] left-[18.9rem] xsm:hidden">
+
+            <img class="w-full h-auto object-contain" src="./assets/img/line-router.svg" alt="">
+          </div>
+          <div class="size-[31.80556rem] xsm:w-full xsm:h-fit relative z-[5]">
+            <div
+              class="rounded-[2.77778rem] xsm:rounded-[1.11111rem] size-full relative z-10 xsm:h-[15.625rem] overflow-hidden bg-linear-default">
+              <div
+                class="w-[43.6rem] h-[44.9rem] absolute bottom-[3.13rem] left-[-1.34rem] scale-x-[-1] xsm:bottom-0 xsm:left-auto xsm:right-0 xsm:w-[16rem] xsm:h-[16.5rem]">
+                <img class="size-full object-fill animate-pulse-v2 delay-[3000ms]" src="./assets/img/ani-violet.png"
+                  alt="Violet Image">
+                <img class="size-full object-fill animate-pulse-v2" src="./assets/img/ani-red.png" alt="Red Image">
+              </div>
+              <img class="size-full relative z-10 object-cover" src="./assets/img/nhu-cau.png" alt="">
+            </div>
+            <div
+              class="sm:absolute sm:-top-[6.26rem] sm:right-[2.25rem] w-[25.9rem] h-[30.1rem] rounded-[2.77778rem] bg-white shadow-sd flex justify-center items-center sm:translate-x-full xsm:w-full xsm:h-fit xsm:rounded-[1.11111rem] xsm:p-[1.11rem] xsm:mt-[0.83rem]">
+              <div class="w-[18.2rem] xsm:w-full h-fit space-y-[0.69rem]">
+                <div class="sm:space-y-[0.69rem] xsm:flex xsm:items-center">
+                  <img class="size-[3.33333rem] xsm:size-[3.61111rem] object-contain" src="./assets/img/quan-ly.svg"
+                    alt="">
+                  <div class="sm:space-y-[0.69rem] xsm:pl-[1.11rem]">
+                    <h5 class="h5 text-greyscale-grey-900 h6-mb">Quản lý</h5>
+                    <span class="sub1 text-greyscale-grey-900 block sub2-mb">Có Kỹ năng Công nghệ</span>
+                  </div>
+                </div>
+                <div class="max-h-[11.1rem] pb-[0.69rem] border-b border-solid border-[#888]/20 overflow-y-auto">
+                  <p class="body1 text-greyscale-grey-500">
+                    Đến năm 2030, kiến thức công nghệ sẽ là kỹ năng được yêu cầu nhiều nhất (+50%), tiếp theo là kỹ
+                    năng
+                    xã hội và quản
+                    trị cảm xúc (+25%) và năng lực nhận thức nâng cao (+10 đến +12%).
+                  </p>
+                </div>
+                <p class="line-clamp-3 text-greyscale-grey-500 body1 italic">Nghiên cứu của Mckinsey, trích từ livre
+                  Blanc
+                  Neoma
+                  “Se former aux métiers de demain” (2020).</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sm:absolute sm:right-0 sm:bottom-0 w-[25.9rem] h-[30.1rem] rounded-[2.77778rem] bg-white shadow-sd flex justify-center items-center xsm:w-full xsm:h-fit xsm:rounded-[1.11111rem] xsm:p-[1.11rem] xsm:mt-[0.83rem]">
+            <div class="w-[18.2rem] h-fit space-y-[0.69rem] xsm:w-full">
+              <div class="sm:space-y-[0.69rem] xsm:flex xsm:items-center">
+                <img class="size-[3.33333rem] xsm:size-[3.61111rem] object-contain" src="./assets/img/ky-su.svg" alt="">
+                <div class="sm:space-y-[0.69rem] xsm:pl-[1.11rem]">
+                  <h5 class="h5 text-greyscale-grey-900 h6-mb">Kỹ sư</h5>
+                  <span class="sub1 text-greyscale-grey-900 block sub2-mb">Có Kỹ Năng Kinh Doanh</span>
+                </div>
+              </div>
+              <div class="sm:max-h-[11.1rem] pb-[0.69rem] border-b border-solid border-[#888]/20 sm:overflow-y-auto">
+                <p class="body1 text-greyscale-grey-500">
+                  Không chỉ có kỹ năng chuyên môn, các công ty còn tìm kiếm những chuyên gia công nghệ có thể hợp tác
+                  với các phòng ban
+                  khác và có kỹ năng kinh doanh.
+                </p>
+              </div>
+              <p class="line-clamp-3 text-greyscale-grey-500 body1 italic">Nghiên cứu từ Hiệp hội Công nghiệp Công nghệ
+                Comptia (2020).</p>
+            </div>
+          </div>
+          <div
+            class="size-fit sm:absolute sm:right-0 sm:-top-[2.92rem] sm:-translate-y-full xsm:w-full xsm:mt-[0.83rem]">
+            <button
+              class="h-[3.33333rem] xsm:h-[2.77778rem] flex items-center justify-center xsm:px-[1.25rem] whitespace-nowrap rounded-[6.5rem] bg-[linear-gradient(95deg,#F7083A_1.18%,#6519FF_79.9%)] xsm:bg-[linear-gradient(94deg,#F7083A_0%,#5400FF_98.93%)] px-[1.67rem] relative before:absolute before:top-0 before:left-0 before:size-full before:rounded-[6.5rem] before:bg-hover before:opacity-0 lg:hover:before:opacity-100 before:transition-all before:duration-300 xsm:w-full"><span
+                class="relative z-10 button2 button1 text-white uppercase mb-[-3px]">Đăng ký tham gia</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+      </div>
     </section>
+
+    <section class="pt-[6.49rem] xsm:pt-[4.17rem] w-full relative">
+      <div class="section-container">
+        <h3 class="text-do h6 sub1-mb">Nhà tiên phong</h3>
+        <h2 class="text-greyscale-grey-900 mt-[0.56rem] h3 h4-mb">Armand Derhy</h2>
+        <p class="sub1 sub2-mb text-xanh w-[24.8rem] xsm:w-[22.4rem] mt-[0.42rem]">Tiến sĩ - Giám đốc Trường Kinh doanh
+          và Công nghệ Paris</p>
+        <div class="w-full relative h-[24.55rem] xsm:mt-[2.57rem]">
+          <div
+            class="w-[33.8rem] h-[31rem] xsm:w-full xsm:h-[14.75rem] bg-linear-default rounded-[2.77778rem] xsm:rounded-[1.11111rem] sm:absolute sm:bottom-0 sm:right-0 xsm:relative">
+            <div
+              class="w-[27.5rem] h-[28.3rem] xsm:h-full xsm:w-[17.3rem] absolute bottom-0 left-0 rounded-[2.77778rem] xsm:rounded-[1.11111rem] overflow-hidden">
+              <img class="size-full object-fill animate-pulse-v2 delay-[3000ms]" src="./assets/img/ani-violet.png"
+                alt="Violet Image">
+              <img class="size-full object-fill animate-pulse-v2" src="./assets/img/ani-red.png" alt="Red Image">
+            </div>
+            <div
+              class="absolute z-10 bottom-0 w-full rounded-[2.77778rem] overflow-hidden h-[34.72424rem] xsm:rounded-[1.11111rem] xsm:h-[17.5rem] flex items-end justify-center">
+              <img class="w-full max-h-full object-contain " src="./assets/img/nha-tien-phong.png" alt="">
+            </div>
+          </div>
+          <div
+            class="body1 text-greyscale-grey-600 [&_strong]:font-bold [&_b]:font-bold [&_strong]:text-greyscale-grey-900 [&_b]:text-greyscale-grey-900 [&_p+p]:mt-[0.56rem] mt-[1.73rem] relative w-[38rem] sm:max-h-[24.55rem] sm:overflow-y-auto sm:overflow-x-hidden xsm:w-full xsm:mt-[1.14rem]">
+            <div
+              class="absolute -top-[4.63rem] -right-[0.74rem] text-[#7D7D7D]/10 text-[8.39674rem] font-semibold leading-[1.06] -tracking-[0.12597rem] xsm:hidden">
+              “</div>
+
+            <p><strong>Big data (Dữ liệu lớn), An ninh mạng, Trí tuệ Nhân tạo</strong>, và những chuyển đổi lớn về mặt xã hội, cho dù
+              liên
+              quan đến số
+              hóa, khí hậu hay nhân khẩu học, đều tác động đáng kể đến hành vi của chúng ta, thúc đẩy mọi lĩnh vực phải
+              tự
+              đổi mới.</p>
+            <p>Chúng tôi chia sẻ tầm nhìn cùng VIETSTAR, đối tác lâu dài của chúng tôi tại Việt Nam, đồng phát triên một
+              Chương trình
+              giá trị để giải quyết các thách thức trong việc áp dụng AI và nêu bật những điểm yếu trong việc ra quyết
+              định
+              dựa trên
+              máy học cho các Doanh nghiệp Việt Nam dựa trên thế mạnh của một trường Tiên phong về tích hợp Lãnh đạo và
+              công
+              nghệ tại
+              Pháp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="" style="height: 50vh;"></section>
+    <!-- <div
+      class="w-[27.5rem] h-[28.3rem] xsm:h-full xsm:w-[17.3rem] absolute bottom-0 left-0 rounded-[2.77778rem] xsm:rounded-[1.11111rem] overflow-hidden">
+      <img class="size-full object-fill animate-pulse-v2 delay-[3000ms]" src="./assets/img/ani-violet.png"
+        alt="Violet Image">
+      <img class="size-full object-fill animate-pulse-v2" src="./assets/img/ani-red.png" alt="Red Image">
+    </div> -->
   </main>
   <footer></footer>
+  <script>
+    function scrollToElementSmooth(el, offset = 0) {
+      if (!el) return;
+
+      const rect = el.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const targetY = rect.top + scrollTop - offset;
+
+      window.scrollTo({
+        top: targetY,
+        behavior: 'smooth'
+      });
+    }
+    const btnToForms = document.querySelectorAll('.btn-actions')
+    if (btnToForms) {
+      Array.from(btnToForms).forEach((e) => {
+        e.addEventListener('click', () => {
+          const el = document.querySelector(e.getAttribute('data-target'))
+          if (!el) {
+            return;
+          }
+          const offset = Number(e.getAttribute('data-offset')) || 10;
+          scrollToElementSmooth(el, offset)
+        })
+      })
+    }
+
+    // Modal management object
+    const ModalManager = {
+      activeModal: null,
+      previousFocus: null,
+
+      // Open modal function
+      open: function (modalId) {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+
+        // Store the currently focused element
+        this.previousFocus = document.activeElement;
+
+        // Set active modal
+        this.activeModal = modalId;
+
+        // Prevent background scrolling
+        document.body.classList.add('modal-open');
+
+        // Show modal
+        modal.classList.add('active');
+
+        // Focus on the modal
+        const modalElement = modal.querySelector('.modal');
+        modalElement.setAttribute('tabindex', '-1');
+        modalElement.focus();
+
+        // Add event listeners
+        this.addEventListeners();
+      },
+
+      // Close modal function
+      // Close modal function
+      close: function (modalId) {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+
+        // ✅ Pause YouTube video
+        const iframe = modal.querySelector("iframe");
+        if (iframe && iframe.src.includes("youtube.com")) {
+          console.log("🚀 ~ iframe:", iframe)
+          iframe.contentWindow.postMessage(
+            '{"event":"command","func":"pauseVideo","args":""}',
+            "*"
+          );
+        }
+
+        // Hide modal
+        modal.classList.remove('active');
+
+        // Re-enable background scrolling
+        document.body.classList.remove('modal-open');
+
+        // Reset active modal
+        this.activeModal = null;
+
+        // Restore focus to the previously focused element
+        if (this.previousFocus) {
+          this.previousFocus.focus();
+          this.previousFocus = null;
+        }
+
+        // Remove event listeners
+        this.removeEventListeners();
+      },
+
+
+      // Add event listeners for modal interactions
+      addEventListeners: function () {
+        document.addEventListener('keydown', this.handleKeydown.bind(this));
+        document.addEventListener('click', this.handleClickOutside.bind(this));
+      },
+
+      // Remove event listeners
+      removeEventListeners: function () {
+        document.removeEventListener('keydown', this.handleKeydown.bind(this));
+        document.removeEventListener('click', this.handleClickOutside.bind(this));
+      },
+
+      // Handle keydown events (Escape key)
+      handleKeydown: function (e) {
+        if (e.key === 'Escape' && this.activeModal) {
+          this.close(this.activeModal);
+        }
+
+        // Handle Tab key for focus trapping
+        if (e.key === 'Tab' && this.activeModal) {
+          this.trapFocus(e);
+        }
+      },
+
+      // Handle clicking outside the modal
+      handleClickOutside: function (e) {
+        if (this.activeModal && e.target.classList.contains('modal-overlay')) {
+          this.close(this.activeModal);
+        }
+      },
+
+      // Trap focus within the modal
+      trapFocus: function (e) {
+        const modal = document.getElementById(this.activeModal);
+        const focusableElements = modal.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    };
+
+    // Global functions for opening and closing modals
+    function openModal(modalId) {
+      ModalManager.open(modalId);
+    }
+
+    function closeModal(modalId) {
+      ModalManager.close(modalId);
+    }
+
+  </script>
 </body>
 
 </html>

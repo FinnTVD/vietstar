@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Modal - JavaScript Implementation</title>
+  <style>
+    /* Base styles */
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.5;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #f8f9fa;
+      transition: padding-right 0.3s ease;
+    }
+
+    /* Prevent scrolling when modal is open */
+    body.modal-open {
+      overflow: hidden;
+      padding-right: 15px;
+    }
+
+    h1,
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    button {
+      background-color: #570df8;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #4406cb;
+    }
+
+    button.btn-secondary {
+      background-color: #64748b;
+    }
+
+    button.btn-secondary:hover {
+      background-color: #475569;
+    }
+
+    .container {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      background-color: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Modal overlay */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Modal container */
+    .modal {
+      background-color: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      max-width: 32rem;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      transform: scale(0.7);
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+
+    .modal-overlay.active .modal {
+      transform: scale(1);
+    }
+
+    .modal-content {
+      padding: 1.5rem;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #64748b;
+      padding: 0.25rem;
+      border-radius: 0.25rem;
+      line-height: 1;
+    }
+
+    .modal-close:hover {
+      background-color: #f1f5f9;
+      color: #334155;
+    }
+
+    .modal-body {
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
+
+    /* Dummy content for scrolling demonstration */
+    .dummy-content {
+      height: 1000px;
+      background: linear-gradient(to bottom, #e2e8f0, #f8fafc);
+      margin-top: 2rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    /* Focus styles for accessibility */
+    .modal:focus {
+      outline: none;
+    }
+
+    button:focus {
+      outline: 2px solid #570df8;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Custom Modal - JavaScript Implementation</h1>
+  <p>Modal implementation without using the HTML dialog element, handled entirely with JavaScript.</p>
+
+  <!-- Basic Modal Example -->
+  <div class="container">
+    <h2>Basic Modal</h2>
+    <p>Opens and closes with JavaScript, prevents background scrolling</p>
+    <button onclick="openModal('modal1')">Open Basic Modal</button>
+  </div>
+
+  <!-- Modal with form -->
+  <div class="container">
+    <h2>Modal with Form</h2>
+    <p>Modal containing a form with input validation</p>
+    <button onclick="openModal('modal2')">Open Form Modal</button>
+  </div>
+
+  <!-- Confirmation Modal -->
+  <div class="container">
+    <h2>Confirmation Modal</h2>
+    <p>Modal for confirming actions</p>
+    <button onclick="openModal('modal3')">Open Confirmation Modal</button>
+  </div>
+
+  <!-- Modal Overlays -->
+  <!-- Basic Modal -->
+  <div id="modal1" class="modal-overlay">
+    <div class="modal" role="dialog" aria-labelledby="modal1-title" aria-describedby="modal1-desc">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modal1-title" class="modal-title">Basic Modal</h3>
+          <button class="modal-close" onclick="closeModal('modal1')" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p id="modal1-desc">This is a basic modal created without using the HTML dialog element. It's fully controlled
+            by JavaScript.</p>
+          <p>Features:</p>
+          <ul>
+            <li>Prevents background scrolling</li>
+            <li>Closes with Escape key</li>
+            <li>Closes when clicking outside</li>
+            <li>Smooth animations</li>
+            <li>Accessible with ARIA attributes</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button onclick="closeModal('modal1')">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form Modal -->
+  <div id="modal2" class="modal-overlay">
+    <div class="modal" role="dialog" aria-labelledby="modal2-title">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modal2-title" class="modal-title">Contact Form</h3>
+          <button class="modal-close" onclick="closeModal('modal2')" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form id="contactForm">
+            <div style="margin-bottom: 1rem;">
+              <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Name:</label>
+              <input type="text" id="name" name="name" required
+                style="width: 100%; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 0.25rem;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+              <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email:</label>
+              <input type="email" id="email" name="email" required
+                style="width: 100%; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 0.25rem;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+              <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message:</label>
+              <textarea id="message" name="message" rows="4" required
+                style="width: 100%; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 0.25rem; resize: vertical;"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-secondary" onclick="closeModal('modal2')">Cancel</button>
+          <button onclick="submitForm()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Confirmation Modal -->
+  <div id="modal3" class="modal-overlay">
+    <div class="modal" role="dialog" aria-labelledby="modal3-title">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modal3-title" class="modal-title">Confirm Action</h3>
+          <button class="modal-close" onclick="closeModal('modal3')" aria-label="Close modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to delete this item? This action cannot be undone.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-secondary" onclick="closeModal('modal3')">Cancel</button>
+          <button onclick="confirmAction()" style="background-color: #dc2626;">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dummy content for scrolling demonstration -->
+  <div class="dummy-content">
+    <h2>Scrollable Content</h2>
+    <p>This content demonstrates that background scrolling is disabled when a modal is open.</p>
+    <p>Try opening a modal and attempting to scroll - you won't be able to!</p>
+  </div>
+
+  <script>
+    // Modal management object
+    const ModalManager = {
+      activeModal: null,
+      previousFocus: null,
+
+      // Open modal function
+      open: function (modalId) {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+
+        // Store the currently focused element
+        this.previousFocus = document.activeElement;
+
+        // Set active modal
+        this.activeModal = modalId;
+
+        // Prevent background scrolling
+        document.body.classList.add('modal-open');
+
+        // Show modal
+        modal.classList.add('active');
+
+        // Focus on the modal
+        const modalElement = modal.querySelector('.modal');
+        modalElement.setAttribute('tabindex', '-1');
+        modalElement.focus();
+
+        // Add event listeners
+        this.addEventListeners();
+      },
+
+      // Close modal function
+      close: function (modalId) {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+
+        // Hide modal
+        modal.classList.remove('active');
+
+        // Re-enable background scrolling
+        document.body.classList.remove('modal-open');
+
+        // Reset active modal
+        this.activeModal = null;
+
+        // Restore focus to the previously focused element
+        if (this.previousFocus) {
+          this.previousFocus.focus();
+          this.previousFocus = null;
+        }
+
+        // Remove event listeners
+        this.removeEventListeners();
+      },
+
+      // Add event listeners for modal interactions
+      addEventListeners: function () {
+        document.addEventListener('keydown', this.handleKeydown.bind(this));
+        document.addEventListener('click', this.handleClickOutside.bind(this));
+      },
+
+      // Remove event listeners
+      removeEventListeners: function () {
+        document.removeEventListener('keydown', this.handleKeydown.bind(this));
+        document.removeEventListener('click', this.handleClickOutside.bind(this));
+      },
+
+      // Handle keydown events (Escape key)
+      handleKeydown: function (e) {
+        if (e.key === 'Escape' && this.activeModal) {
+          this.close(this.activeModal);
+        }
+
+        // Handle Tab key for focus trapping
+        if (e.key === 'Tab' && this.activeModal) {
+          this.trapFocus(e);
+        }
+      },
+
+      // Handle clicking outside the modal
+      handleClickOutside: function (e) {
+        if (this.activeModal && e.target.classList.contains('modal-overlay')) {
+          this.close(this.activeModal);
+        }
+      },
+
+      // Trap focus within the modal
+      trapFocus: function (e) {
+        const modal = document.getElementById(this.activeModal);
+        const focusableElements = modal.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    };
+
+    // Global functions for opening and closing modals
+    function openModal(modalId) {
+      ModalManager.open(modalId);
+    }
+
+    function closeModal(modalId) {
+      ModalManager.close(modalId);
+    }
+
+    // Form submission handler
+    function submitForm() {
+      const form = document.getElementById('contactForm');
+      const formData = new FormData(form);
+
+      // Simple validation
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const message = formData.get('message');
+
+      if (!name || !email || !message) {
+        alert('Please fill in all fields');
+        return;
+      }
+
+      // Simulate form submission
+      alert('Form submitted successfully!');
+      form.reset();
+      closeModal('modal2');
+    }
+
+    // Confirmation action handler
+    function confirmAction() {
+      alert('Item deleted successfully!');
+      closeModal('modal3');
+    }
+
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      console.log('Custom Modal System Initialized');
+    });
+  </script>
+</body>
+
+</html>
