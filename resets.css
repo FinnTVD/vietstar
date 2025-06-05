@@ -83,7 +83,7 @@ html::-webkit-scrollbar-track,
 
 html::-webkit-scrollbar-thumb,
 .custom-scroll::-webkit-scrollbar-thumb {
-  background: var(--Fill-Primary, #2cb4b7);
+  background: linear-gradient(180deg, #f7083a 0%, #6519ff 100%);
   border-radius: 1.5rem;
 }
 
