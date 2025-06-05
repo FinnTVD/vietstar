@@ -336,13 +336,13 @@
       </div>
     </section>
 
-    <section class="pt-[6.49rem] xsm:pt-[4.17rem] w-full relative">
+    <section id="section-pin" class="pt-[6.49rem] pb-[10.34rem] xsm:pb-[1.41rem] xsm:pt-[4.17rem] xsm:w-full sm:w-[99%] relative">
       <div class="section-container">
         <h3 class="text-do h6 sub1-mb">Nhà tiên phong</h3>
         <h2 class="text-greyscale-grey-900 mt-[0.56rem] h3 h4-mb">Armand Derhy</h2>
         <p class="sub1 sub2-mb text-xanh w-[24.8rem] xsm:w-[22.4rem] mt-[0.42rem]">Tiến sĩ - Giám đốc Trường Kinh doanh
           và Công nghệ Paris</p>
-        <div class="w-full relative h-[24.55rem] xsm:mt-[2.57rem]">
+        <div class="w-full relative sm:h-[24.55rem] xsm:mt-[2.57rem]">
           <div
             class="w-[33.8rem] h-[31rem] xsm:w-full xsm:h-[14.75rem] bg-linear-default rounded-[2.77778rem] xsm:rounded-[1.11111rem] sm:absolute sm:bottom-0 sm:right-0 xsm:relative">
             <div
@@ -382,7 +382,7 @@
       </div>
     </section>
 
-    <section class="sm:rounded-[2.77778rem_2.77778rem_0rem_0rem] h-[52.61396rem] w-full relative overflow-hidden xsm:h-[24.86111rem] xsm:bg-white">
+    <section id="section-trigger" class="sm:rounded-[2.77778rem_2.77778rem_0rem_0rem] h-[52.61396rem] w-full relative overflow-hidden xsm:h-[24.86111rem] xsm:bg-white">
         <img class="xsm:hidden object-cover w-full h-full xsm:h-[16.11111rem]" src="./assets/img/imgbg-contact.png" alt="img contact">
         <img class="sm:hidden object-cover w-full h-full xsm:h-[16.11111rem]" src="./assets/img/imgbg-contact-mb.png" alt="img contact">
         <div class="absolute z-10 bottom-[-10.14rem] left-[-17.94rem] xsm:bottom-0 xsm:left-0 xsm:right-0 xsm:w-full xsm:h-[12.44549rem] w-[51.48639rem] h-[26.72903rem] sm:rounded-[100%] sm:bg-[#F7083A] xsm:bg-[linear-gradient(0deg,#F7083A_63.55%,rgba(247,8,58,0.00)_100%)] sm:blur-[100px]"></div>
@@ -397,7 +397,7 @@
         </div>
     </section>
 
-    <section class="py-[6.94rem] xsm:py-[4.16667rem] section-container xsm:!mx-0 xsm:w-full">
+    <section class="bg-white relative z-10 py-[6.94rem] xsm:py-[4.16667rem] section-container xsm:!mx-0 xsm:w-full">
         <div class="xsm:w-[calc(100%-2.78rem)] xsm:mx-auto flex justify-between items-end mb-[1.39rem] xsm:mb-[1.11111rem]">
             <div class="space-y-[0.55556rem]">
                 <p class="text-[#F7083A] font-svnGilroy text-[1.80556rem] xsm:text-[1.38889rem] xsm:leading-[1.80556rem] xsm:tracking-[0.01736rem] font-bold leading-[1]">Nội dung đào tạo</p>
@@ -431,7 +431,7 @@
                 </div>
             </div>
             <div class="sm:hidden space-y-[0.42rem] w-[18.36389rem] xsm:w-full xsm:overflow-hidden xsm:overflow-x-auto xsm:p-[0rem_1.35417rem_0rem_1.38889rem] scrollbar-hidden">
-              <div class="flex items-center xsm:space-x-[0.41667rem]">
+              <div class="flex items-center xsm:space-x-[0.41667rem] w-max">
                 <div class="itemtraining_contentMB relative flex-shrink-0 active cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
                     <p class="sub2 sub2-mb text-[#272727]">1. Lãnh đạo công nghệ</p>
                 </div>
@@ -442,7 +442,7 @@
                     <p class="sub2 sub2-mb text-[#272727]">3. Tầm nhìn Công nghệ</p>
                 </div>
               </div>
-              <div class="flex items-center xsm:space-x-[0.41667rem]">
+              <div class="flex items-center xsm:space-x-[0.41667rem] w-max">
                 <div class="itemtraining_contentMB relative flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
                     <p class="sub2 sub2-mb text-[#272727]">4. Quản lý Công nghệ</p>
                 </div>
@@ -644,6 +644,11 @@ cùng nhiều chủ đề khác.</p>
 
   </main>
   <footer></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
   <script>
     function scrollToElementSmooth(el, offset = 0) {
       if (!el) return;
@@ -801,6 +806,25 @@ cùng nhiều chủ đề khác.</p>
       ModalManager.close(modalId);
     }
 
+    gsap.registerPlugin(ScrollTrigger);
+    const sectionPin = document.getElementById('section-pin')
+    if (window.innerWidth > 639) {
+      ScrollTrigger.create({
+        trigger: sectionPin,
+        start: "top top",      
+        pin: true,
+        pinSpacing: false,   
+      });
+    } else {
+      ScrollTrigger.create({
+        trigger: "#section-trigger",
+        start: "75 bottom",      
+        pin: sectionPin,
+        pinSpacing: false,   
+      });
+    }
+    
+    
   </script>
   <script src="./app.js"></script>
 </body>
