@@ -211,9 +211,10 @@
 
     <!-- huy -->
     <section class="sm:rounded-[2.77778rem_2.77778rem_0rem_0rem] h-[52.61396rem] w-full relative overflow-hidden xsm:h-[24.86111rem] xsm:bg-white">
-        <img class="object-cover w-full h-full xsm:h-[16.11111rem]" src="./assets/img/imgbg-contact.png" alt="img contact">
+        <img class="xsm:hidden object-cover w-full h-full xsm:h-[16.11111rem]" src="./assets/img/imgbg-contact.png" alt="img contact">
+        <img class="sm:hidden object-cover w-full h-full xsm:h-[16.11111rem]" src="./assets/img/imgbg-contact-mb.png" alt="img contact">
         <div class="absolute z-10 bottom-[-10.14rem] left-[-17.94rem] xsm:bottom-0 xsm:left-0 xsm:right-0 xsm:w-full xsm:h-[12.44549rem] w-[51.48639rem] h-[26.72903rem] sm:rounded-[100%] sm:bg-[#F7083A] xsm:bg-[linear-gradient(0deg,#F7083A_63.55%,rgba(247,8,58,0.00)_100%)] sm:blur-[100px]"></div>
-        <div class="sm:hidden absolute top-0 left-0 right-0 w-full h-[4.16667rem] bg-[linear-gradient(180deg,#FFF_30%,rgba(255,255,255,0.00)_75%)]"></div>
+        <div class="sm:hidden absolute top-0 left-0 right-0 w-full h-[4.16667rem] bg-[linear-gradient(180deg,#FFF_-30%,rgba(255,255,255,0.00)_75%)]"></div>
         <div class="absolute bottom-[4.37rem] left-[10.42rem] xsm:left-[1.39rem] xsm:bottom-[1.42rem] z-[11]">
             <div class="flex items-center mb-[0.69rem]">
                 <p class="text-[#FFF] font-svnGilroy text-[1.18056rem] font-bold leading-[1.59722rem] sm:tracking-[0.01181rem] xsm:text-[1.11111rem] xsm:leading-[1.52778rem]">Hà Nội</p>
@@ -225,37 +226,61 @@
     </section>
 
     <section class="py-[6.94rem] xsm:py-[4.16667rem] section-container xsm:!mx-0 xsm:w-full">
-        <div class="xsm:w-[calc(100%-2.78rem)] xsm:mx-auto flex justify-between items-center mb-[1.39rem] xsm:mb-[1.11111rem]">
+        <div class="xsm:w-[calc(100%-2.78rem)] xsm:mx-auto flex justify-between items-end mb-[1.39rem] xsm:mb-[1.11111rem]">
             <div class="space-y-[0.55556rem]">
                 <p class="text-[#F7083A] font-svnGilroy text-[1.80556rem] xsm:text-[1.38889rem] xsm:leading-[1.80556rem] xsm:tracking-[0.01736rem] font-bold leading-[1]">Nội dung đào tạo</p>
                 <h2 class="text-[3.75rem] font-svnGilroy font-bold leading-[4.02778rem] text-[#272727] xsm:text-[2.36111rem] xsm:leading-[2.77778rem] xsm:tracking-[0.0059rem] [&_br]:sm:hidden">4 Tháng - <br/> 30 tín chỉ ECTS</h2>
             </div>
-            <button class="xsm:hidden h-[3.33333rem] xsm:h-[2.77778rem] flex items-center xsm:px-[1.25rem] whitespace-nowrap rounded-[6.5rem] bg-[linear-gradient(95deg,#F7083A_1.18%,#6519FF_79.9%)] xsm:bg-[linear-gradient(94deg,#F7083A_0%,#5400FF_98.93%)] px-[1.67rem] relative before:absolute before:top-0 before:left-0 before:size-full before:rounded-[6.5rem] before:bg-hover before:opacity-0 lg:hover:before:opacity-100 before:transition-all before:duration-300">
+            <button class="xsm:hidden sm:mb-[0.69rem] h-[3.33333rem] xsm:h-[2.77778rem] flex items-center xsm:px-[1.25rem] whitespace-nowrap rounded-[6.5rem] bg-[linear-gradient(95deg,#F7083A_1.18%,#6519FF_79.9%)] xsm:bg-[linear-gradient(94deg,#F7083A_0%,#5400FF_98.93%)] px-[1.67rem] relative before:absolute before:top-0 before:left-0 before:size-full before:rounded-[6.5rem] before:bg-hover before:opacity-0 lg:hover:before:opacity-100 before:transition-all before:duration-300">
                 <span class="relative z-10 button2 button1 text-white uppercase">
                     Đăng ký tham gia
                 </span>
             </button>
         </div>
         <div class="flex sm:space-x-[2.08rem] xsm:space-y-[0.83333rem] xsm:flex-col">
-            <div class="sm:space-y-[0.55556rem] xsm:space-x-[0.41667rem] w-[18.36389rem] xsm:flex xsm:w-full xsm:overflow-hidden xsm:overflow-x-auto xsm:p-[0rem_1.35417rem_0rem_1.38889rem] scrollbar-hidden">
-                <div class="itemtraining_content flex-shrink-0 active cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff]">
+            <div class="xsm:hidden sm:space-y-[0.55556rem] xsm:space-x-[0.41667rem] w-[18.36389rem] xsm:w-full xsm:overflow-hidden xsm:overflow-x-auto xsm:p-[0rem_1.35417rem_0rem_1.38889rem] scrollbar-hidden">
+                <div class="itemtraining_content relative flex-shrink-0 active cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
                     <p class="sub2 sub2-mb text-[#272727]">1. Lãnh đạo công nghệ</p>
                 </div>
-                <div class="itemtraining_content flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff]">
+                <div class="itemtraining_content relative flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
                     <p class="sub2 sub2-mb text-[#272727]">2. Tư duy Thiết kế và Đổi mới</p>
                 </div>
-                <div class="itemtraining_content flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff]">
+                <div class="itemtraining_content relative flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
                     <p class="sub2 sub2-mb text-[#272727]">3. Tầm nhìn Công nghệ</p>
                 </div>
-                <div class="itemtraining_content flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff]">
+                <div class="itemtraining_content relative flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
                     <p class="sub2 sub2-mb text-[#272727]">4. Quản lý Công nghệ</p>
                 </div>
-                <div class="itemtraining_content flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff]">
+                <div class="itemtraining_content relative flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
                     <p class="sub2 sub2-mb text-[#272727]">5. Trí tuệ Nhân tạo</p>
                 </div>
-                <div class="itemtraining_content flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff]">
+                <div class="itemtraining_content relative flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
                     <p class="sub2 sub2-mb text-[#272727]">6. Dự án cuối khóa</p>
                 </div>
+            </div>
+            <div class="sm:hidden space-y-[0.42rem] w-[18.36389rem] xsm:w-full xsm:overflow-hidden xsm:overflow-x-auto xsm:p-[0rem_1.35417rem_0rem_1.38889rem] scrollbar-hidden">
+              <div class="flex items-center xsm:space-x-[0.41667rem]">
+                <div class="itemtraining_contentMB relative flex-shrink-0 active cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
+                    <p class="sub2 sub2-mb text-[#272727]">1. Lãnh đạo công nghệ</p>
+                </div>
+                <div class="itemtraining_contentMB relative flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
+                    <p class="sub2 sub2-mb text-[#272727]">2. Tư duy Thiết kế và Đổi mới</p>
+                </div>
+                <div class="itemtraining_contentMB relative flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
+                    <p class="sub2 sub2-mb text-[#272727]">3. Tầm nhìn Công nghệ</p>
+                </div>
+              </div>
+              <div class="flex items-center xsm:space-x-[0.41667rem]">
+                <div class="itemtraining_contentMB relative flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
+                    <p class="sub2 sub2-mb text-[#272727]">4. Quản lý Công nghệ</p>
+                </div>
+                <div class="itemtraining_contentMB relative flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
+                    <p class="sub2 sub2-mb text-[#272727]">5. Trí tuệ Nhân tạo</p>
+                </div>
+                <div class="itemtraining_contentMB relative flex-shrink-0 cursor-pointer p-[0.69444rem_1.11111rem] rounded-[6.94444rem] bg-[#EFEFEF] [&.active]:bg-[#6519FF] [&.active_p]:text-[#fff] transition-all duration-500 sm:hover:bg-[#6519FF] [&_p]:sm:hover:text-[#fff] [&.active]:before:block before:hidden before:absolute before:top-[50%] before:translate-y-[-50%] before:right-[calc(-1.67rem-0.83333rem)] before:size-[0.83333rem] before:rounded-[100%] before:bg-[#EFEFEF]">
+                    <p class="sub2 sub2-mb text-[#272727]">6. Dự án cuối khóa</p>
+                </div>
+              </div>
             </div>
             <div class="xsm:w-[calc(100%-2.78rem)] xsm:space-y-[0.83333rem] xsm:mx-auto flex xsm:flex-col sm:space-x-[1.11111rem] flex-1 p-[1.38889rem] xsm:p-[1.11111rem] rounded-[1.38889rem] bg-[#EFEFEF]">
                 <div class="space-y-[0.55556rem] flex-1">
@@ -265,19 +290,19 @@
                     </div>
                     <div class="training_content active hidden [&.active]:block space-y-[0.55556rem] ">
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
                             <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Hiểu rõ về cuộc khủng hoảng lãnh đạo toàn cầu.</p>
                         </div>
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
                             <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Phân biệt giữa nhà lãnh đạo và nhà quản lý (và nhà quản lý sáng tạo).</p>
                         </div>
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
                             <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Phát triển các kỹ năng lãnh đạo trong suốt sự nghiệp.</p>
                         </div>
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
                             <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Tìm hiểu về những đổi mới trong lãnh đạo ở nhiều lĩnh vực khác nhau:
 quân đội, mafia, chăm sóc sức khoẻ, sân khấu (Molière), thế giới động vật,
 đến các khía cạnh khác như cảm xúc, lòng tin, sự tập trung và sự gắn kết,
@@ -286,96 +311,67 @@ cùng nhiều chủ đề khác.</p>
                     </div>
                     <div class="training_content hidden [&.active]:block space-y-[0.55556rem] ">
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Hiểu rõ về cuộc khủng hoảng lãnh đạo toàn cầu.</p>
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
+                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Áp dụng phương pháp tiếp cận lấy người dùng làm trung tâm bằng cách ưu tiên nhu cầu của các bên liên quan trong suốt quá trình sáng tạo.</p>
                         </div>
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Phân biệt giữa nhà lãnh đạo và nhà quản lý (và nhà quản lý sáng tạo).</p>
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
+                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Phát triển các kỹ năng thiết yếu trong tư duy thiết kế qua việc thực hiện các giai đoạn chính: thấu hiểu, sáng tạo ý tưởng, tạo mẫu và thử nghiệm.</p>
                         </div>
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Phát triển các kỹ năng lãnh đạo trong suốt sự nghiệp.</p>
-                        </div>
-                        <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Tìm hiểu về những đổi mới trong lãnh đạo ở nhiều lĩnh vực khác nhau:
-quân đội, mafia, chăm sóc sức khoẻ, sân khấu (Molière), thế giới động vật,
-đến các khía cạnh khác như cảm xúc, lòng tin, sự tập trung và sự gắn kết,
-cùng nhiều chủ đề khác.</p>
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
+                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Thúc đẩy việc ra quyết định dựa trên dữ liệu nhằm biến các ý tưởng đổi mới thành những giải pháp chiến lược và kinh tế có tính khả thi cao.</p>
                         </div>
                     </div>
                     <div class="training_content hidden [&.active]:block space-y-[0.55556rem] ">
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Hiểu rõ về cuộc khủng hoảng lãnh đạo toàn cầu.</p>
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
+                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Củng cố kỹ năng ra quyết định của mình trong môi trường đầy biến động bằng cách kết hợp trực giác chiến lược với phân tích chặt chẽ.</p>
                         </div>
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Phân biệt giữa nhà lãnh đạo và nhà quản lý (và nhà quản lý sáng tạo).</p>
-                        </div>
-                        <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Phát triển các kỹ năng lãnh đạo trong suốt sự nghiệp.</p>
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
+                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Khám phá phương thức để điều chỉnh các cải tiến công nghệ với các mục tiêu dài hạn của tổ chức đồng thời xem xét các yếu tố xã hội và môi trường.</p>
                         </div>
                     </div>
                     <div class="training_content hidden [&.active]:block space-y-[0.55556rem] ">
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Hiểu rõ về cuộc khủng hoảng lãnh đạo toàn cầu.</p>
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
+                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Quản lý các dự án Kỹ thuật số</p>
                         </div>
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Phân biệt giữa nhà lãnh đạo và nhà quản lý (và nhà quản lý sáng tạo).</p>
-                        </div>
-                        <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Phát triển các kỹ năng lãnh đạo trong suốt sự nghiệp.</p>
-                        </div>
-                        <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Tìm hiểu về những đổi mới trong lãnh đạo ở nhiều lĩnh vực khác nhau:
-quân đội, mafia, chăm sóc sức khoẻ, sân khấu (Molière), thế giới động vật,
-đến các khía cạnh khác như cảm xúc, lòng tin, sự tập trung và sự gắn kết,
-cùng nhiều chủ đề khác.</p>
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
+                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Quản lý các dự án AI</p>
                         </div>
                     </div>
                     <div class="training_content hidden [&.active]:block space-y-[0.55556rem] ">
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Hiểu rõ về cuộc khủng hoảng lãnh đạo toàn cầu.</p>
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
+                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Hiểu biết về các công cụ AI và tiềm năng ứng dụng</p>
                         </div>
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Phân biệt giữa nhà lãnh đạo và nhà quản lý (và nhà quản lý sáng tạo).</p>
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
+                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Tối ưu hóa AI để nâng cao hiệu suất quản trị</p>
                         </div>
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Phát triển các kỹ năng lãnh đạo trong suốt sự nghiệp.</p>
-                        </div>
-                        <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
-                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Tìm hiểu về những đổi mới trong lãnh đạo ở nhiều lĩnh vực khác nhau:
-quân đội, mafia, chăm sóc sức khoẻ, sân khấu (Molière), thế giới động vật,
-đến các khía cạnh khác như cảm xúc, lòng tin, sự tập trung và sự gắn kết,
-cùng nhiều chủ đề khác.</p>
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
+                            <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Liên kết các sáng kiến ​​AI với các mục tiêu kinh doanh</p>
                         </div>
                     </div>
                     <div class="training_content hidden [&.active]:block space-y-[0.55556rem] ">
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
                             <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Hiểu rõ về cuộc khủng hoảng lãnh đạo toàn cầu.</p>
                         </div>
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
                             <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Phân biệt giữa nhà lãnh đạo và nhà quản lý (và nhà quản lý sáng tạo).</p>
                         </div>
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
                             <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Phát triển các kỹ năng lãnh đạo trong suốt sự nghiệp.</p>
                         </div>
                         <div class="flex items-start space-x-[0.48611rem]">
-                            <img class="size-[1.11111rem] object-contain translate-y-[0.2rem]" src="./assets/img/check-green.svg" alt="">
+                            <img class="size-[1.11111rem] object-contain translate-y-[0.4rem]" src="./assets/img/check-green.svg" alt="">
                             <p class="text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] body2-mb text-[#545454]">Tìm hiểu về những đổi mới trong lãnh đạo ở nhiều lĩnh vực khác nhau:
 quân đội, mafia, chăm sóc sức khoẻ, sân khấu (Molière), thế giới động vật,
 đến các khía cạnh khác như cảm xúc, lòng tin, sự tập trung và sự gắn kết,
@@ -444,7 +440,7 @@ cùng nhiều chủ đề khác.</p>
                 <img class="xsm:hidden absolute right-0 bottom-0 h-[16.14153rem] w-[15.67472rem] z-[10] scale-x-[-1] fade-animation" src="./assets/img/line-xanh.svg" alt="">
                 <img class="xsm:hidden absolute right-0 bottom-0 h-[16.14153rem] w-[15.67472rem] z-[11] scale-x-[-1] fade-animation" src="./assets/img/line-do.svg" alt="">
                 <div class="absolute xsm:right-[1.65rem] sm:left-[11.41rem] top-[-0.7rem] xsm:text-[7.23042rem] xsm:leading-[8.13424rem] text-center w-fit font-svnGilroy text-[11.97875rem] font-bold leading-[1] text-linear-gradient">1</div>
-                <div class="sm:absolute sm:top-[2.05rem] sm:right-[2.05rem] space-y-[0.55556rem] xsm:space-y-[0.33535rem]">
+                <div class="sm:absolute sm:top-[2.05rem] sm:right-[2.05rem] space-y-[0.55556rem] xsm:space-y-[0.33535rem] z-20">
                     <p class="h6 text-[#FFF] xsm:text-[1.38889rem] xsm:leading-[1.80556rem] xsm:font-bold xsm:tracking-[0.01736rem]">Các Lãnh đạo Cấp Cao</p>
                     <p class="xsm:w-[13.62792rem] xsm:text-[1.11111rem] xsm:font-medium xsm:leading-[137.5%] xsm:tracking-[0.00278rem] text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] text-[#FFF] w-[18.19444rem]">mong muốn trang bị cho tổ chức khả năng sẵn sàng ứng dụng AI.</p>
                 </div>
@@ -457,13 +453,13 @@ cùng nhiều chủ đề khác.</p>
                 <img class="xsm:hidden absolute right-0 bottom-0 h-[16.14153rem] w-[15.67472rem] z-[11] scale-x-[-1] fade-animation" src="./assets/img/line-do.svg" alt="">
                 
                 <div class="sm:hidden w-[3.58882rem] h-[7.82903rem] absolute right-0 top-[2.83rem] bg-[linear-gradient(90deg,#6519FF_0%,rgba(101,25,255,0.00)_100%)]"></div>
-                <div class="sm:hidden w-[3.58882rem] h-[7.82903rem] absolute right-[6.27rem] top-[2.83rem] bg-[linear-gradient(9 0deg,#6519FF_0%,rgba(101,25,255,0.00)_100%)]"></div>
+                <div class="sm:hidden w-[3.58882rem] h-[7.82903rem] absolute right-[6.27rem] top-[2.83rem] bg-[linear-gradient(90deg,#6519FF_0%,rgba(101,25,255,0.00)_100%)]"></div>
                 <div class="sm:hidden w-[11.60146rem] h-[3.58882rem] absolute right-0 top-[7.2rem] bg-[linear-gradient(360deg,#6519FF_0%,rgba(101,25,255,0.00)_100%)]"></div>
 
                 <div class="absolute xsm:right-[1.65rem] sm:left-[11.41rem] top-[-0.7rem] xsm:text-[7.23042rem] xsm:leading-[8.13424rem] text-center w-fit font-svnGilroy text-[11.97875rem] font-bold leading-[1] text-linear-gradient">2</div>
-                <div class="xsm:relative xsm:z-[12] sm:absolute sm:top-[2.05rem] sm:right-[2.05rem] space-y-[0.55556rem]">
+                <div class="xsm:relative xsm:z-[12] sm:absolute sm:top-[2.05rem] sm:right-[2.05rem] space-y-[0.55556rem] z-20">
                     <p class="h6 text-[#FFF] xsm:text-[1.38889rem] xsm:leading-[1.80556rem] xsm:font-bold xsm:tracking-[0.01736rem]">Các Nhà lãnh đạo <br/> & Quản lý</p>
-                    <p class="xsm:w-[13.62792rem] xsm:text-[1.11111rem] xsm:font-medium xsm:leading-[137.5%] xsm:tracking-[0.00278rem] text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] text-[#FFF] w-[18.19444rem]">tìm kiếm góc nhìn toàn diện để dẫn dắt tổ chức trong kỷ nguyên số, với trọng tâm là chiến lược, cơ cấu tổ chức và đổi mới gắn liền với AI và công nghệ dữ liệu</p>
+                    <p class="xsm:w-[13.62792rem] xsm:text-[1.11111rem] font-medium xsm:leading-[137.5%] xsm:tracking-[0.00278rem] text-[1.18056rem] leading-[1.73611rem] tracking-[0.00299rem] text-[#FFF] w-[17.46139rem]">tìm kiếm góc nhìn toàn diện để dẫn dắt tổ chức trong kỷ nguyên số, với trọng tâm là chiến lược, cơ cấu tổ chức và đổi mới gắn liền với AI và công nghệ dữ liệu</p>
                 </div>
             </div>
         </div>

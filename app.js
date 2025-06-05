@@ -14,3 +14,20 @@ if (itemtraining_content && training_content) {
         });
     });
 }
+const itemtraining_contentMB = document.querySelectorAll(
+    ".itemtraining_contentMB"
+);
+if (itemtraining_contentMB && training_content) {
+    itemtraining_contentMB.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            itemtraining_contentMB.forEach((el) => {
+                el.classList.remove("active");
+            });
+            training_content.forEach((el) => {
+                el.classList.remove("active");
+            });
+            training_content[index].classList.add("active");
+            item.classList.add("active");
+        });
+    });
+}
